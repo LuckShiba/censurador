@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Censurador</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="title">Gerador de imagem censurada</h1>
+      <canvas id="imagem" height="1200" width="1200"></canvas>
+      <div class="buttons">
+        <button id="escolher">Escolher arquivo</button>
+        <button id="baixar">Baixar</button>
+      </div>
+    </main>
+
+    <div class="modal" id="modal">
+      <div class="container">
+        <div class="image-container">
+          <img src="censurada.png" id="crop-image" />
+        </div>
+        <div class="buttons">
+          <button id="cancelar">Cancelar</button>
+          <button id="confirmar">Confirmar</button>
+        </div>
+      </div>
+    </div>
+
+    <input type="file" accept="image/*" id="arquivo" aria-hidden="true" />
+    <a id="dl" aria-hidden="true"></a>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
